@@ -1,7 +1,4 @@
-
-
- 
- .about_me {
+.about_me {
    
    
   border-right: 80px;
@@ -613,5 +610,94 @@ img {height: 100px;
     
    
   } 
+
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+
+
+
+
+
+  /* The body's bg color will be #333 */
+  body {
+    background-color: #333;
+    font-size: 80%;
+   position: relative;
+    
+  }
+
+
+
+  /* The wrapper's width will be 600px */
+  .wrapper {
+    width: 600px;
+  }
+  img .img1_click .img2_click{
+    size: 50%;
+    position: relative;
+    z-index: -1;
+    width: 80%;
+    height: 150px;
+  }
+
+
+  #portfolio_me_color {
+    font-size: 80%;
+  }
+
+  .nav {
+    width: 40%;
+position: fixed; 
+right:  300px; 
+top: 1px;}
+
+
+img {height: 100px;
+  width: 100px;}
+
+  .nav  #active a header {
+    position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  
+  text-align: center;
+  height: 30px;
+  border-right: 20%;
+  border-left: 20%;
+  border-bottom: 30%;
+  border-top: 30%;
+  border-right: 20px;
+  border-left: 20px;
+  border-bottom: 30px;
+  border-top: 30px;
+
+ 
+
+  }
+  #footer{
+    background-color: gray;
+    height: 30px;
+    border-right: 20%;
+    border-left: 20%;
+    border-bottom: 30%;
+    border-top: 30%;
+    border-right: 20px;
+    border-left: 20px;
+    border-bottom: 30px;
+    border-top: 30px;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+  text-align: center;
+  }
 
 }
