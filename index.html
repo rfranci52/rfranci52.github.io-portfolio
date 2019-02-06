@@ -1,96 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- link to css -->
-    <link rel="stylesheet" type="text/css" href="c.css"> 
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    #copyright {
+  text-align: center;
+  border-bottom: 0%;
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <title>Document</title>
+
+}
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
 </head>
-
-
-<!-- visual content -->
 
 <body>
 
-<!-- the navigation pane-should be the same for all pages -->
-<header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Rakim Francis</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav mr-auto">
-            
-            <li class="nav-item">
-              <a class="nav-link" href="in.html">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-          </form>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="#">Logo</a> -->
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="portfolio.html">portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+                </ul>
+            </div>
         </div>
-      </nav>
-<!-- <nav class="navbar-brand">
-<a id="active" href="">Rakim Francis</a>
-<a href="in.html" >About Me</a>
-<a href="contact.html">Contact</a>
-<a href="portfolio.html">Portfolio</a>
-</nav> -->
-</header>
+    </nav>
 
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <!-- <div class="col-sm-2 sidenav">
+                <p><a href="in.html">Link</a></p>
+                <p><a href="#">Link</a></p>
+                <p><a href="#">Link</a></p>
+            </div> -->
+            <div class="col-sm-10 text-left">
 
-    <!-- about me section-sililar on all pages, name should be name of page -->
-    <section class="about_me">
-
-        <h1 
-            id="about_me_color">About Me
-        </h1>
-           
-                        
-    <div class="image_of_myself">
-        <p2>
-            <img src="https://images.pexels.com/photos/658687/pexels-photo-658687.jpeg?cs=srgb&dl=beautiful-bloom-blooming-658687.jpg&fm=jpg" width="200" height="200"> 
-                            
-                
-                    
-        </p2>
+                <h1>Rakim Francis</h1>
+                <img src="https://images.pexels.com/photos/658687/pexels-photo-658687.jpeg?cs=srgb&dl=beautiful-bloom-blooming-658687.jpg&fm=jpg"
+                    class="img-rounded" alt="Cinque Terre" width="150" height="150">
+                <p> My name is Rakim Francis and I am a prospective Full-Stack web developer. I am passionate about
+                    computers
+                    and
+                    talking to them because I desire to learn new and interesting things. My Problem solving abilities
+                    are
+                    something that I continue to improve with the philosophy that learning flow, creating flow,
+                    maintaining
+                    flow
+                    is
+                    the foundation to less unneccessary headaches.</p>
+                <hr>
+                <!-- <h3>Test</h3>
+                <p>Lorem ipsum...</p> -->
+            </div>
+            <div class="col-sm-2 sidenav">
+                <div class="well">
+                    <p>ADS</p>
+                </div>
+                <div class="well">
+                    <p>ADS</p>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <footer class="container-fluid text-center">
+        <p>copyright</p>
+    </footer>
 
-    <div class="paragraph_about_myself">
-        <p>
-    My name is Rakim Francis and I am a prospective Full-Stack web developer. I am passionate about computers and talking to them because I desire to learn new and interesting things. My Problem solving abilities are something that I continue to improve with the philosophy that  learning flow, creating flow, maintaining flow is the foundation to less unneccessary headaches.      </p>
-    </div>
-      
+</body>
 
-    </section>
-           
-    <section id="mid_section">
-
-    </section>
-
-
-
-    <section id="footer">
-            <footer id="copyright">
-                <p>copyright </p>
-            </footer>
-            </section>
-            
-                    
-                    
-    </body>
 </html>
-
