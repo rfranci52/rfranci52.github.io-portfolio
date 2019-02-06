@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>$("#my-form").submit(function(e) {
+            e.preventDefault();
+          
+            var $form = $(this);
+            $.post($form.attr("action"), $form.serialize()).then(function() {
+              alert("Thank you!");
+            });
+          });</script>
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
@@ -89,14 +97,24 @@
 
 
                 <div class="contact_me">
-                    <form action="mailto:rakimfrancis@gmail.com" method="POST" enctype="text/plain">
-                        <label1>Name</label1> <br /> <input type="text" name="label1" id="label1"> <br />
-                        <label2>email</label2> <br /> <input type="text" name="email" id="email"><br />
-                        <label3 class="label3">message</label3> <br /> <input type="text" name="message" class="label3">
-                        <br />
 
-                        <input type="submit" value="Submit">
+
+
+                    <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                        <p class="hidden">
+                            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        <p>
+                            <label>Email: <input type="text" name="email" /></label>
+                        </p>
+                        <p>
+                            <label>Message: <textarea name="message"></textarea></label>
+                        </p>
+                        <p>
+                            <button type=”submit”>Send</button>
+                        </p>
                     </form>
+
 
 
                 </div>
